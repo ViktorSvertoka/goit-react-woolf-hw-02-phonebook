@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-import { FcBusinessContact } from 'react-icons/fc';
+import { BiSolidContact } from 'react-icons/bi';
 
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
@@ -63,7 +63,7 @@ class App extends Component {
     return (
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <FcBusinessContact className="mx-auto" size="75" fill="#4f46e5" />
+          <BiSolidContact className="mx-auto" size="75" color="#4f46e5" />
           <h1 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
             Phonebook
           </h1>
