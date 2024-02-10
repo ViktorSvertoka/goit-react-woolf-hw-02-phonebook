@@ -68,15 +68,15 @@ class App extends Component {
             Phonebook
           </h1>
         </div>
-
         <ContactForm onSubmit={this.addContact} />
-
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Contacts
-        </h2>
         {this.state.contacts.length > 0 ? (
-          // Фільтр для відображення контактів
-          <Filter value={filter} onChangeFilter={this.changeFilter} />
+          <>
+            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              Contacts
+            </h2>
+            {/* Фільтр для відображення контактів */}
+            <Filter value={filter} onChangeFilter={this.changeFilter} />
+          </>
         ) : (
           <p className="mt-10 text-center text-1xl font-bold leading-9 tracking-tight text-gray-600">
             Your phonebook is empty. Add first contact!
