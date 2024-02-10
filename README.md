@@ -164,3 +164,5 @@ state = {
 контакти.
 
 ![preview](./assets/step-6.gif)
+
+![screencapture](./assets/screencapture.png)
