@@ -17,7 +17,7 @@ class App extends Component {
     filter: '',
   };
 
-  // Добавление нового контакта в список контактов
+  // Додавання нового контакту до списку контактів
   addContact = contact => {
     const isInContacts = this.state.contacts.some(
       ({ name }) => name.toLowerCase() === contact.name.toLowerCase()
@@ -32,12 +32,12 @@ class App extends Component {
     }));
   };
 
-  // Изменение значения фильтра
+  // Зміна значення фільтра
   changeFilter = event => {
     this.setState({ filter: event.target.value });
   };
 
-  // Получение отфильтрованных контактов
+  // Отримання відфільтрованих контактів
   getVisibleContacts = () => {
     const { filter, contacts } = this.state;
     const normalizedFilter = filter.toLowerCase();
@@ -47,7 +47,7 @@ class App extends Component {
     );
   };
 
-  // Удаление контакта из списка
+  // Видалення контакту зі списку
   removeContact = contactId => {
     this.setState(prevState => {
       return {
@@ -63,7 +63,7 @@ class App extends Component {
     return (
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <FcBusinessContact className="mx-auto" size="75" />
+          <FcBusinessContact className="mx-auto" size="75" fill="#4f46e5" />
           <h1 className="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
             Phonebook
           </h1>
@@ -75,13 +75,15 @@ class App extends Component {
           Contacts
         </h2>
         {this.state.contacts.length > 0 ? (
-          // Фильтр для отображения контактов
+          // Фільтр для відображення контактів
           <Filter value={filter} onChangeFilter={this.changeFilter} />
         ) : (
-          <div>Your phonebook is empty. Add first contact!</div>
+          <p className="mt-10 text-center text-1xl font-bold leading-9 tracking-tight text-gray-600">
+            Your phonebook is empty. Add first contact!
+          </p>
         )}
         {this.state.contacts.length > 0 && (
-          // Список контактов
+          // Список контактів
           <ContactList
             contacts={visibleContacts}
             onRemoveContact={this.removeContact}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Компонент фильтрации контактов
+// Компонент фільтрації контактів
 function Filter({ value, onChangeFilter }) {
   return (
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

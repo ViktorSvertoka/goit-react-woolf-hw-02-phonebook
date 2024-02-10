@@ -7,28 +7,28 @@ class ContactForm extends React.Component {
     number: '',
   };
 
-  // Генерация уникальных идентификаторов для полей формы
+  // Генерація унікальних ідентифікаторів для полів форми
   nameInputId = nanoid();
   numberInputId = nanoid();
 
-  // Обработка отправки формы
+  // Обробка відправлення форми
   handleSubmit = event => {
     event.preventDefault();
 
-    // Вызов функции onSubmit из родительского компонента с передачей объекта контакта
+    // Виклик функції onSubmit із батьківського компонента з передачею об'єкта контакту
     this.props.onSubmit({ name: this.state.name, number: this.state.number });
 
-    // Сброс состояния формы
+    // Скидання стану форми
     this.reset();
   };
 
-  // Обработка изменения значений полей формы
+  // Обробка зміни значень полів форми
   handleChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
 
-  // Сброс состояния формы
+  // Скидання стану форми
   reset = () => {
     this.setState({ number: '', name: '' });
   };
