@@ -165,4 +165,6 @@ state = {
 
 ![preview](./assets/step-6.gif)
 
+## Фінальний результат
+
 ![screencapture](./assets/screencapture.png)
